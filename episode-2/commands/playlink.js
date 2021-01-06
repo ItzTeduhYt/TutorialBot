@@ -1,6 +1,5 @@
 let ytdl = require('ytdl-core')
 exports.run = async(client, message, args) => {
-  let queue = client.queue.get(message.guild.id)
   if (!message.member.voice.channel) return message.channel.send(`Mohon masuk ke Voice Channel!`);
   
   if (!args[0]) return  message.channel.send(`Mohon masukan link video youtube!`);
